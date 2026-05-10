@@ -23,7 +23,7 @@ Develop a system for collecting and analyzing EEG signals using off-the-shelf co
 
 ## Gallery
 
-![Analog Front-End Schematic](Analog_FrontEnd_TinkerCAD_Schematic.png)
+![Analog Front-End Schematic](Analog_FrontEnd_TinkerCAD_Schematic.jpg)
 
 ## Next Steps
 

@@ -23,7 +23,7 @@ Develop a system for collecting and analyzing EEG signals using off-the-shelf co
 
 ## Gallery
 
-<img src="images/Analog_FrontEnd_TinkerCAD_Schematic.jpg" width="650" alt="Hand-drawn EEG Analog Front-End Schematic">
+<img src="images/Analog_FrontEnd_TinkerCAD_Schematic.jpg" width="420" alt="Hand-drawn EEG Analog Front-End Schematic">
 
 ## Next Steps
 

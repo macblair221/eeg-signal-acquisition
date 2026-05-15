@@ -24,13 +24,13 @@ This project is for learning, prototyping, and non-medical experimentation only.
   - Transient analysis to test sine-wave inputs at different frequencies
 - Current LTspice version uses an approximate passband of ~0.5 Hz to ~40 Hz with total simulated gain of approximately 121x
 
-- **Hardware**
+### Hardware 
 - Completed hand-drawn schematic planning
 - Sourced major components for breadboard-level testing
 - Tested basic Arduino Nano Every setup and simple breadboard circuits
 - Planning physical signal-chain testing before connecting electrodes
 
-- **Software**
+### Software
 - Tested basic Arduino serial communication
 - Planned Python pipeline for:
   - Serial data reading

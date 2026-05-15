@@ -24,7 +24,7 @@ Develop a system for collecting and analyzing EEG signals using off-the-shelf co
 ## Gallery
 
 <img src="images/Analog_FrontEnd_TinkerCAD_Schematic.jpg" width="420" alt="Hand-drawn EEG Analog Front-End Schematic">
-<img src="images/LTspice_OpAmp_BandPass.jpg" width="420" alt="LTspice Schematic of Analog Front-End">
+<img src="images/LTspice_OpAmp_BandPass.jpg" width="600" alt="LTspice Schematic of Analog Front-End">
 
 ## Next Steps
 

@@ -54,6 +54,8 @@ ltspice/
 images/
   Analog_FrontEnd_TinkerCAD_Schematic.jpg
   LTspice_OpAmp_BandPass.jpg
+  ...
+  ...
 ```
 
 ## Next Steps

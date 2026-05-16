@@ -22,6 +22,8 @@ This project is for learning, prototyping, and non-medical experimentation only.
 - Verified circuit behavior using:
   - AC analysis to inspect frequency response and gain
   - Transient analysis to test sine-wave inputs at different frequencies
+- Replaced the ideal op-amp model with LTspice’s ADTL084 model as a more realistic TL084-family approximation
+- Verified predictable gain behavior across 1mV, 100µV, 50µV, and 10µV test inputs
 - Current LTspice version uses an approximate passband of ~0.5 Hz to ~40 Hz with total simulated gain of approximately 121x
 
 ### Hardware 
@@ -72,12 +74,12 @@ images/
 
 ## Next Steps
 
-- Continue LTspice refinement using more realistic op-amp models
-- Build and test the physical circuit in isolated, battery-powered conditions
-- Validate amplifier and filter stages with known test signals before using electrodes
-- Implement Arduino-based real-time data collection
-- Develop Python analysis tools for visualization, filtering, FFT, and feature extraction
-- Document results and limitations as the project develops
+- Refine the LTspice model by adding more realistic input conditions, including low-amplitude EEG-like signals, low-frequency drift, and 60 Hz noise
+- Compare simulated behavior against physical breadboard tests using known test signals before connecting electrodes
+- Build and test the analog front-end in isolated, battery-powered conditions
+- Implement Arduino-based real-time data collection from the biased analog output
+- Develop a Python analysis pipeline for serial reading, visualization, digital filtering, FFT analysis, and feature extraction
+- Document limitations, safety considerations, and differences between simulation and physical hardware
 
 ## Tech Stack
 - Hardware: Arduino Nano Every, AD620 instrumentation amplifier, TL084CN op-amps, resistors, capacitors, trimpot, electrodes, Zener diodes

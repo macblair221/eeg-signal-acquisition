@@ -24,13 +24,15 @@ This project is for learning, prototyping, and non-medical experimentation only.
   - Transient analysis to test sine-wave inputs at different frequencies
 - Replaced the ideal op-amp model with LTspice’s ADTL084 model as a more realistic TL084-family approximation
 - Verified predictable gain behavior across 1mV, 100µV, 50µV, and 10µV test inputs
+- Simulated more realistic EEG-like input conditions by combining a 10 Hz signal with 60 Hz noise and low-frequency baseline drift
+- Verified that the final Arduino ADC node remains centered near 2.5V while preserving the amplified signal and showing remaining noise/artifact components
 - Current LTspice version uses an approximate passband of ~0.5 Hz to ~40 Hz with total simulated gain of approximately 121x
 
 ### Hardware 
 - Completed hand-drawn schematic planning
 - Sourced major components for breadboard-level testing
 - Tested basic Arduino Nano Every setup and simple breadboard circuits
-- Planning physical signal-chain testing before connecting electrodes
+- Planning physical signal-chain testing with known test signals before connecting electrodes
 
 ### Software
 - Tested basic Arduino serial communication
@@ -81,9 +83,9 @@ images/
 
 ## Next Steps
 
-- Refine the LTspice model by adding more realistic input conditions, including low-amplitude EEG-like signals, low-frequency drift, and 60 Hz noise
 - Compare simulated behavior against physical breadboard tests using known test signals before connecting electrodes
 - Build and test the analog front-end in isolated, battery-powered conditions
+- Evaluate whether additional gain, stronger filtering, a 60 Hz notch filter, or an external ADC is needed for microvolt-level EEG signals
 - Implement Arduino-based real-time data collection from the biased analog output
 - Develop a Python analysis pipeline for serial reading, visualization, digital filtering, FFT analysis, and feature extraction
 - Document limitations, safety considerations, and differences between simulation and physical hardware

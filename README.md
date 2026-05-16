@@ -55,7 +55,7 @@ This project is for learning, prototyping, and non-medical experimentation only.
 
 <img src="images/schematics_images/ADTL084_10u_input_to_output.jpg" width="600" alt="LTspice Schematic of Analog Front-End">
 
-*LTspice schematic design for analog front-end using ADTL084 OpAmp (higher-precision and accuracy than traditional TL084) Also includes output behavior with 10microvolt input*
+*LTspice schematic design for analog front-end using ADTL084 OpAmp (higher-precision and accuracy than traditional TL084). Also includes output behavior with 10microvolt input*
 
 <img src="images/schematics_images/eeg_frontend_noise_drift_schematic_output.jpg" width="600" alt="LTspice transient simulation of noisy EEG-like signal at Arduino input">
 

@@ -45,7 +45,7 @@ This project is for learning, prototyping, and non-medical experimentation only.
 First hand-drawn schematic for basic analog front-end design
 <img src="images/schematics_images/LTspice_OpAmp_BandPass.jpg" width="600" alt="LTspice Schematic of Analog Front-End">
 LTspice schematic design for analog front-end using universal OpAmp
-<img src="images/schematics_images/LTspice_OpAmp_BandPass.jpg" width="600" alt="LTspice Schematic of Analog Front-End">
+<img src="images/schematics_images/ADTL084_10u_input_to_output.jpg" width="600" alt="LTspice Schematic of Analog Front-End">
 LTspice schematic design for analog front-end using ADTL084 OpAmp (higher-precision and accuracy than traditional TL084)
 
 ## Repository Structure
@@ -56,10 +56,13 @@ ltspice/
   eeg_frontend_v1_transient.asc
 
 images/
-  Analog_FrontEnd_TinkerCAD_Schematic.jpg
-  LTspice_OpAmp_BandPass.jpg
-  ...
-  ...
+  schematics_images/
+    images of hand-drawn/LTSpice schematics
+  parts/
+    physical parts
+  breadboard_work/
+    images of my work on a breadboard
+    
 ```
 
 ## Next Steps

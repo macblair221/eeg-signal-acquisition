@@ -82,10 +82,9 @@ images/
 ```
 
 ## Next Steps
-
+- Continue to refine the LTspice simulation to match physical circuit design 
 - Compare simulated behavior against physical breadboard tests using known test signals before connecting electrodes
 - Build and test the analog front-end in isolated, battery-powered conditions
-- Evaluate whether additional gain, stronger filtering, a 60 Hz notch filter, or an external ADC is needed for microvolt-level EEG signals
 - Implement Arduino-based real-time data collection from the biased analog output
 - Develop a Python analysis pipeline for serial reading, visualization, digital filtering, FFT analysis, and feature extraction
 - Document limitations, safety considerations, and differences between simulation and physical hardware

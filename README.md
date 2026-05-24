@@ -94,7 +94,7 @@ images/
 - Document limitations, safety considerations, and differences between simulation and physical hardware
 
 ## Tech Stack
-- Hardware: Arduino Nano Every, AD620 instrumentation amplifier, TL084CN op-amps, resistors, capacitors, trimpot, electrodes, Zener diodes
+- Hardware: Gold-plated electrodes, Arduino Nano Every, AD620ANZ instrumentation amplifier, TL084CN op-amps, resistors, capacitors, trimpot, Zener diodes
 - Simulation/Design: Tinkercad, LTspice
 - Planned Analysis: Python, NumPy, SciPy, Matplotlib
 

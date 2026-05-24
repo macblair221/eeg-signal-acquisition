@@ -67,7 +67,7 @@ This project is for learning, prototyping, and non-medical experimentation only.
 
 *Transient simulation of the full EEG-like front-end using a differential input with 10 Hz signal content, 60 Hz noise, and baseline drift into AD620A. The final output remains centered near the 2.5V Arduino ADC bias after instrumentation amplification, filtering, and op-amp gain stages.*
 
-<img src="images/schematics_images/eeg_frontend_AD620A_differntial_noise.jpg" width="600" alt="LTspice transient simulation of differential voltage signal with noise to AD620A">
+<img src="images/schematics_images/eeg_full_frontend_input_protection.jpg" width="600" alt="Full frontend with zener clamps added">
 
 *Added input protection for AD620A using Zener Clamps*
 

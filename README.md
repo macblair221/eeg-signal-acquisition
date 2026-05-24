@@ -61,11 +61,9 @@ This project is for learning, prototyping, and non-medical experimentation only.
 
 *Transient simulation of an EEG-like input containing a 10 Hz signal, 60 Hz noise, and slow drift after passing through the analog front-end. The output remains centered around the 2.5V Arduino ADC bias.*
 
-<img src="images/schematics_images/eeg_frontend_AD620A_final_output.jpg" width="600" alt="LTspice transient simulation of differential voltage signal to AD620A">
+<img src="images/schematics_images/eeg_frontend_AD620A_differntial_noise.jpg" width="600" alt="LTspice transient simulation of differential voltage signal with noise to AD620A">
 
-*Transient simulation of differential sine input (+-50 microvolts and 10 Hz signal). The output remains centered around 2.5V for the Arduino.*
-
-<img src="images/schematics_images/eeg_frontend_AD620A_final_output.jpg" width="600" alt="LTspice transient simulation of differential voltage signal to AD620A">
+*Transient simulation of the full EEG-like front-end using a differential input with 10 Hz signal content, 60 Hz noise, and baseline drift into AD620A. The final output remains centered near the 2.5V Arduino ADC bias after instrumentation amplification, filtering, and op-amp gain stages.*
 
 ## Repository Structure
 

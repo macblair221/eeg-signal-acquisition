@@ -12,21 +12,21 @@ This project is for learning, prototyping, and non-medical experimentation only.
 ## Current Progress
 
 ### Analog Front-End Design 
+
 - Created an early analog front-end prototype in Tinkercad to model signal conditioning, amplification, filtering, and Arduino-compatible 2.5V biasing
 - Rebuilt the core front-end architecture in LTspice for more rigorous circuit simulation
-- Designed and simulated a signal chain consisting of:
-  - RC high-pass filtering for low-frequency drift reduction
-  - Two non-inverting op-amp gain stages
+- Designed and simulated a full EEG-style signal chain consisting of:
+  - Differential EEG-like input modeled with an AD620A instrumentation amplifier
+  - RC high-pass filtering for low-frequency drift 
+  - ADTL084 op-amp gain stages for additional amplification
   - RC low-pass filtering for high-frequency attenuation
-  - AC coupling into a 2.5V Arduino-compatible bias node
-- Verified circuit behavior using:
-  - AC analysis to inspect frequency response and gain
-  - Transient analysis to test sine-wave inputs at different frequencies
+  - AC coupling into a 2.5V Arduino-compatible ADC bias node
+- Verified circuit behavior using AC analysis for frequency response and transient analysis for time-domain waveform behavior
 - Replaced the ideal op-amp model with LTspice’s ADTL084 model as a more realistic TL084-family approximation
-- Verified predictable gain behavior across 1mV, 100µV, 50µV, and 10µV test inputs
-- Simulated more realistic EEG-like input conditions by combining a 10 Hz signal with 60 Hz noise and low-frequency baseline drift
+- Tested the full chain using low-amplitude differential inputs, including clean sine waves and EEG-like signals with 10 Hz content, 60 Hz noise, and low-frequency baseline drift
 - Verified that the final Arduino ADC node remains centered near 2.5V while preserving the amplified signal and showing remaining noise/artifact components
-- Current LTspice version uses an approximate passband of ~0.5 Hz to ~40 Hz with total simulated gain of approximately 121x
+- Current LTspice version uses an approximate bandpass filter of ~0.5 Hz to ~40 Hz, with gain distributed across the AD620A input stage and op-amp amplification stages
+
 
 ### Hardware 
 - Completed hand-drawn schematic planning
@@ -86,7 +86,8 @@ images/
 ```
 
 ## Next Steps
-- Continue to refine the LTspice simulation to match physical circuit design 
+- Add and evaluate input protection components, including current-limiting resistors and zener diode clamping, before finalizing the breadboard design
+- Convert the LTspice simulation into a clean breadboard build schematic with IC pin numbers, rails, component values, and Arduino connections
 - Compare simulated behavior against physical breadboard tests using known test signals before connecting electrodes
 - Build and test the analog front-end in isolated, battery-powered conditions
 - Implement Arduino-based real-time data collection from the biased analog output

@@ -17,15 +17,17 @@ This project is for learning, prototyping, and non-medical experimentation only.
 - Rebuilt the core front-end architecture in LTspice for more rigorous circuit simulation
 - Designed and simulated a full EEG-style signal chain consisting of:
   - Differential EEG-like input modeled with an AD620A instrumentation amplifier
-  - RC high-pass filtering for low-frequency drift 
+  - Series current-limiting resistors and 5.1V zener clamps for input protection
+  - RC high-pass filtering for low-frequency drift reduction
   - ADTL084 op-amp gain stages for additional amplification
   - RC low-pass filtering for high-frequency attenuation
   - AC coupling into a 2.5V Arduino-compatible ADC bias node
+- Verified input protection behavior by confirming the zener clamps remain inactive during normal EEG-like signals and activate during large input stress tests
 - Verified circuit behavior using AC analysis for frequency response and transient analysis for time-domain waveform behavior
 - Replaced the ideal op-amp model with LTspice’s ADTL084 model as a more realistic TL084-family approximation
 - Tested the full chain using low-amplitude differential inputs, including clean sine waves and EEG-like signals with 10 Hz content, 60 Hz noise, and low-frequency baseline drift
 - Verified that the final Arduino ADC node remains centered near 2.5V while preserving the amplified signal and showing remaining noise/artifact components
-- Current LTspice version uses an approximate bandpass filter of ~0.5 Hz to ~40 Hz, with gain distributed across the AD620A input stage and op-amp amplification stages
+- Current LTspice version uses an approximate ~0.5 Hz to ~40 Hz bandpass, with gain distributed across the AD620A input stage and ADTL084 amplification stages
 
 
 ### Hardware 
@@ -86,7 +88,6 @@ images/
 ```
 
 ## Next Steps
-- Add and evaluate input protection components, including current-limiting resistors and zener diode clamping, before finalizing the breadboard design
 - Convert the LTspice simulation into a clean breadboard build schematic with IC pin numbers, rails, component values, and Arduino connections
 - Compare simulated behavior against physical breadboard tests using known test signals before connecting electrodes
 - Build and test the analog front-end in isolated, battery-powered conditions

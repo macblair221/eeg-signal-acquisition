@@ -65,6 +65,8 @@ This project is for learning, prototyping, and non-medical experimentation only.
 
 *Transient simulation of differential sine input (+-50 microvolts and 10 Hz signal). The output remains centered around 2.5V for the Arduino.*
 
+<img src="images/schematics_images/eeg_frontend_AD620A_final_output.jpg" width="600" alt="LTspice transient simulation of differential voltage signal to AD620A">
+
 ## Repository Structure
 
 ```text

@@ -42,11 +42,12 @@ The system was physically validated using a Lead I ECG placement (gold-plated cu
 
 ## Simulation Gallery
 
+LTspice schematic design for analog front-end using universal OpAmp.
 <img src="images/schematics_images/LTspice_OpAmp_BandPass.jpg" width="600" alt="LTspice Schematic of Analog Front-End">
-*LTspice schematic design for analog front-end using universal OpAmp.*
 
+Transient simulation of an EEG-like input containing a 10 Hz signal, 60 Hz noise, and slow drift after passing through the analog front-end. The output remains centered around the Arduino ADC bias.
 <img src="images/schematics_images/eeg_frontend_noise_drift_schematic_output.jpg" width="600" alt="LTspice transient simulation of noisy EEG-like signal at Arduino input">
-*Transient simulation of an EEG-like input containing a 10 Hz signal, 60 Hz noise, and slow drift after passing through the analog front-end. The output remains centered around the Arduino ADC bias.*
+
 
 ## Repository Structure
 

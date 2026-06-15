@@ -32,7 +32,7 @@ The system was physically validated using a Lead I ECG placement (gold-plated cu
 
 *The physical analog amplification and filtering chain bridged to the Arduino 10-bit ADC.*
 
-<img src="images/mne_filtered_ecg.jpg" width="600" alt="Band Pass filtered ECG Signal">
+<img src="images/mne_filtered_ecg.png" width="600" alt="Band Pass filtered ECG Signal">
 
 *The raw analog data processed through MNE-Python. A 1Hz-40Hz digital bandpass filter successfully eliminates baseline wander and residual high-frequency artifacts.*
 

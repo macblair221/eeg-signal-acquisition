@@ -75,3 +75,8 @@ images/
 - Re-tune the analog gain stages to accommodate microscopic $50\mu\text{V}$ EEG brainwaves.
 - Transition electrode placement to the frontal lobe/occipital lobe for Alpha-wave detection experiments.
 - Implement real-time Fast Fourier Transform (FFT) analysis to calculate Power Spectral Density (PSD).
+
+## Tech Stack
+- Hardware: Gold-plated cup electrodes, Arduino Nano Every, AD620ANZ instrumentation amplifier, TL084CN op-amps, discrete passive components.
+- Simulation/Design: Tinkercad, LTspice.
+- Data Pipeline & Analysis: Python, PySerial, Pandas, NumPy, SciPy, MNE-Python, Matplotlib.

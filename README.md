@@ -13,14 +13,14 @@ This project is for learning, prototyping, and non-medical experimentation only.
 ### 1. Analog Front-End Hardware (Completed)
 - Designed and simulated a full analog signal chain in LTspice using an AD620ANZ instrumentation amplifier and TL084 op-amp gain stages.
 - Successfully built the physical circuit on a breadboard, implementing an RC high-pass filter for low-frequency drift reduction and an RC low-pass filter ($f_c \approx 40.8\text{ Hz}$) to attenuate 60Hz interference.
-- Engineered a stable 2.4V DC bias to safely couple the alternating biological current into the Arduino's 0-5V digital domain.
+- Engineered a 2.4V DC bias to safely couple the alternating biological current into the Arduino's 0-5V digital domain.
 
 ### 2. Digital Telemetry & Data Acquisition (Completed)
 - Established a real-time serial communication bridge using an Arduino Nano Every.
 - Wrote a Python collection script utilizing `pyserial` to capture the 10-bit ADC byte stream at a 200Hz sampling rate and log the raw telemetry to a local CSV.
 
-### 3. Signal Processing & Algorithm Validation (Completed)
-- Ingested the raw hardware array into `mne-python` (a clinical-grade neurophysiology library).
+### 3. Signal Processing & Algorithm Validation (IP)
+- Ingested the raw hardware array into `mne-python` 
 - Applied a 1Hz to 40Hz digital bandpass filter to eliminate residual DC baseline wander and high-frequency breadboard noise.
 - Engineered and debugged an automated peak-detection algorithm using `scipy.signal.find_peaks`, utilizing minimum-voltage thresholds to prevent false-positive wave detection and extract a resting heart rate.
 
@@ -31,14 +31,6 @@ The system was validated using a Lead I ECG placement (gold-plated cup electrode
 <img src="images/real_circuit_build.jpg" width="600" alt="Full Circuit">
 
 *The physical analog amplification and filtering chain bridged to the Arduino 10-bit ADC.*
-
-<img src="images/mne_filtered_ecg.png" width="600" alt="Band Pass filtered ECG Signal">
-
-*The raw analog data processed through MNE-Python. A 1Hz-40Hz digital bandpass filter successfully eliminates baseline wander and residual high-frequency artifacts.*
-
-<img src="images/scipy_peak_detection.png" width="600" alt="Heart beat using peak detection">
-
-*Validation using SciPy. A strict amplitude threshold and distance parameter were applied, successfully calculating an accurate resting state of 67.1 BPM.*
 
 ## Simulation Gallery
 
@@ -71,9 +63,10 @@ images/
 ```
 
 ## Next Steps
-- Re-tune the analog gain stages to accommodate microscopic $50\mu\text{V}$ EEG brainwaves.
+- Refine Arduino IDE code to better accommodate the sampling frequency. Originally hardcoded a 200Hz sampling rate but got a true $f_c \approx 190.6\text{ Hz}$ sampling rate. Hardcoding the 200Hz sampling rate meant the MNE bandpass filter assumed each sample is 1/200th of a second apart when it was really 1/190.6th of a second apart. This squeezes the samples I had into a tighter window, making my measured heartbeat faster than it really was.
+- Re-tune the analog gain stages to accommodate $50\mu\text{V}$ EEG brainwaves.
 - Transition electrode placement to the frontal lobe/occipital lobe for Alpha-wave detection experiments.
-- Implement real-time Fast Fourier Transform (FFT) analysis to calculate Power Spectral Density (PSD).
+- Implement real-time Fast Fourier Transform (FFT) analysis to calculate Power Spectral Density (PSD). (must dial in sampling rate discrepancies first)
 
 ## Tech Stack
 - Hardware: Gold-plated cup electrodes, Arduino Nano Every, AD620ANZ instrumentation amplifier, TL084CN op-amps, discrete passive components.

@@ -12,7 +12,7 @@ This project is for learning, prototyping, and non-medical experimentation only.
 
 ### 1. Analog Front-End Hardware (Completed)
 - Designed and simulated a full analog signal chain in LTspice using an AD620ANZ instrumentation amplifier and TL084 op-amp gain stages.
-- Successfully built the physical circuit on a breadboard, implementing an RC high-pass filter for low-frequency drift reduction and an RC low-pass filter ($f_c \approx 40.8\text{ Hz}$) to attenuate 60Hz ambient electromagnetic interference.
+- Successfully built the physical circuit on a breadboard, implementing an RC high-pass filter for low-frequency drift reduction and an RC low-pass filter ($f_c \approx 40.8\text{ Hz}$) to attenuate 60Hz interference.
 - Engineered a stable 2.4V DC bias to safely couple the alternating biological current into the Arduino's 0-5V digital domain.
 
 ### 2. Digital Telemetry & Data Acquisition (Completed)
@@ -22,25 +22,25 @@ This project is for learning, prototyping, and non-medical experimentation only.
 ### 3. Signal Processing & Algorithm Validation (Completed)
 - Ingested the raw hardware array into `mne-python` (a clinical-grade neurophysiology library).
 - Applied a 1Hz to 40Hz digital bandpass filter to eliminate residual DC baseline wander and high-frequency breadboard noise.
-- Engineered and debugged an automated peak-detection algorithm using `scipy.signal.find_peaks`, utilizing strict minimum-voltage thresholds to prevent false-positive wave detection and extract a resting heart rate.
+- Engineered and debugged an automated peak-detection algorithm using `scipy.signal.find_peaks`, utilizing minimum-voltage thresholds to prevent false-positive wave detection and extract a resting heart rate.
 
 ## Results & Signal Processing
 
 The system was physically validated using a Lead I ECG placement (gold-plated cup electrodes and Ten20 conductive paste). The pipeline successfully isolated the raw QRS complex from the physical noise floor.
 
 ![Physical Analog Circuit Build](images/real_circuit_build.jpg)
+
 *The physical analog amplification and filtering chain bridged to the Arduino 10-bit ADC.*
 
 ![MNE Filtered ECG Signal](images/mne_filtered_ecg.jpg)
-*The raw analog data processed through MNE-Python. A 1Hz-40Hz digital bandpass filter successfully eliminates baseline wander and residual high-frequency fuzz, isolating the physiological QRS complex.*
+
+*The raw analog data processed through MNE-Python. A 1Hz-40Hz digital bandpass filter successfully eliminates baseline wander and residual high-frequency artifacts.*
 
 ![SciPy Automated Peak Detection](images/scipy_peak_detection.jpg)
-*Algorithmic validation using SciPy. A strict amplitude threshold and distance parameter were applied to ignore secondary T-waves, successfully calculating an accurate resting state of 67.1 BPM.*
+
+*Algorithmic validation using SciPy. A strict amplitude threshold and distance parameter were applied, successfully calculating an accurate resting state of 67.1 BPM.*
 
 ## Simulation Gallery
-
-<img src="images/schematics_images/Analog_FrontEnd_TinkerCAD_Schematic.jpg" width="420" alt="Hand-drawn EEG Analog Front-End Schematic">
-*First hand-drawn schematic for basic analog front-end design.*
 
 <img src="images/schematics_images/LTspice_OpAmp_BandPass.jpg" width="600" alt="LTspice Schematic of Analog Front-End">
 *LTspice schematic design for analog front-end using universal OpAmp.*

@@ -52,7 +52,7 @@ Transient simulation of an EEG-like input containing a 10 Hz signal, 60 Hz noise
 
 Full front-end design utilizing an AD620 instrumentation Amplifier
 
-<img src="images/schematics_images/eeg_frontend_noise_drift_schematic_output.jpg" width="600" alt="LTspice transient simulation of noisy EEG-like signal at Arduino input">
+<img src="images/schematics_images/eeg_full_frontend_input_protection.jpg" width="600" alt="Full LTspice schematic (AD620)">
 
 
 ## Repository Structure

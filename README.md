@@ -36,7 +36,7 @@ The system was physically validated using a Lead I ECG placement (gold-plated cu
 
 *The raw analog data processed through MNE-Python. A 1Hz-40Hz digital bandpass filter successfully eliminates baseline wander and residual high-frequency artifacts.*
 
-![SciPy Automated Peak Detection](images/scipy_peak_detection.jpg)
+<img src="images/scipy_peak_detection.jpg" width="600" alt="Heart beat using peak detection">
 
 *Validation using SciPy. A strict amplitude threshold and distance parameter were applied, successfully calculating an accurate resting state of 67.1 BPM.*
 

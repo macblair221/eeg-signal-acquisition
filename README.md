@@ -26,7 +26,7 @@ This project is for learning, prototyping, and non-medical experimentation only.
 
 ## Results & Signal Processing
 
-The system was physically validated using a Lead I ECG placement (gold-plated cup electrodes and Ten20 conductive paste). The pipeline successfully isolated the raw QRS complex from the physical noise floor.
+The system was validated using a Lead I ECG placement (gold-plated cup electrodes and Ten20 conductive paste).
 
 <img src="images/real_circuit_build.jpg" width="600" alt="Full Circuit">
 

@@ -63,7 +63,7 @@ images/
 ```
 
 ## Next Steps
-- Refine Arduino IDE code to better accommodate the sampling frequency. Originally hardcoded a 200Hz sampling rate but got a true $f_c \approx 190.6\text{ Hz}$ sampling rate. Hardcoding the 200Hz sampling rate meant the MNE bandpass filter assumed each sample is 1/200th of a second apart when it was really 1/190.6th of a second apart. This squeezes the samples I had into a tighter window, making my measured heartbeat faster than it really was.
+- Refine Arduino IDE code to better accommodate the sampling frequency. Originally hardcoded a 200Hz sampling rate but got a true $f_s \approx 190.6\text{ Hz}$ sampling rate. Hardcoding the 200Hz sampling rate meant the MNE bandpass filter assumed each sample is 1/200th of a second apart when it was really 1/190.6th of a second apart. This squeezes the samples I had into a tighter window, making my measured heartbeat faster than it really was.
 - Re-tune the analog gain stages to accommodate $50\mu\text{V}$ EEG brainwaves.
 - Transition electrode placement to the frontal lobe/occipital lobe for Alpha-wave detection experiments.
 - Implement real-time Fast Fourier Transform (FFT) analysis to calculate Power Spectral Density (PSD). (must dial in sampling rate discrepancies first)

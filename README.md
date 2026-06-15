@@ -28,7 +28,7 @@ This project is for learning, prototyping, and non-medical experimentation only.
 
 The system was physically validated using a Lead I ECG placement (gold-plated cup electrodes and Ten20 conductive paste). The pipeline successfully isolated the raw QRS complex from the physical noise floor.
 
-![Physical Analog Circuit Build](images/real_circuit_build.jpg)
+<img src="images/mne_filtered_ecg.jpg" width="600" alt="Full Circuit Build">
 
 *The physical analog amplification and filtering chain bridged to the Arduino 10-bit ADC.*
 

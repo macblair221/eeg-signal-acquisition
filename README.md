@@ -69,3 +69,9 @@ images/
   schematics_images/
     LTspice_OpAmp_bandPass.jpg
     ...
+```
+
+## Next Steps
+- Re-tune the analog gain stages to accommodate microscopic $50\mu\text{V}$ EEG brainwaves.
+- Transition electrode placement to the frontal lobe/occipital lobe for Alpha-wave detection experiments.
+- Implement real-time Fast Fourier Transform (FFT) analysis to calculate Power Spectral Density (PSD).

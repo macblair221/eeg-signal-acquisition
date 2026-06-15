@@ -38,7 +38,7 @@ The system was physically validated using a Lead I ECG placement (gold-plated cu
 
 ![SciPy Automated Peak Detection](images/scipy_peak_detection.jpg)
 
-*Algorithmic validation using SciPy. A strict amplitude threshold and distance parameter were applied, successfully calculating an accurate resting state of 67.1 BPM.*
+*Validation using SciPy. A strict amplitude threshold and distance parameter were applied, successfully calculating an accurate resting state of 67.1 BPM.*
 
 ## Simulation Gallery
 
@@ -46,7 +46,11 @@ LTspice schematic design for analog front-end using universal OpAmp.
 
 <img src="images/schematics_images/LTspice_OpAmp_BandPass.jpg" width="600" alt="LTspice Schematic of Analog Front-End">
 
-Transient simulation of an EEG-like input containing a 10 Hz signal, 60 Hz noise, and slow drift after passing through the analog front-end. The output remains centered around the Arduino ADC bias.
+Transient simulation of an EEG-like input containing a 10 Hz signal, 60 Hz noise, and slow drift after passing through the analog front-end. 
+
+<img src="images/schematics_images/eeg_frontend_noise_drift_schematic_output.jpg" width="600" alt="LTspice transient simulation of noisy EEG-like signal at Arduino input">
+
+Full front-end design utilizing an AD620 instrumentation Amplifier
 
 <img src="images/schematics_images/eeg_frontend_noise_drift_schematic_output.jpg" width="600" alt="LTspice transient simulation of noisy EEG-like signal at Arduino input">
 

@@ -67,11 +67,6 @@ src/
   signal_processing.ipynb
 
 images/
-  real_circuit_build.jpg
-  mne_filtered_ecg.jpg
-  scipy_peak_detection.jpg
-  schematics_images/
-    LTspice_OpAmp_bandPass.jpg
     ...
 ```
 
